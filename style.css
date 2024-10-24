@@ -1,0 +1,187 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: auto; 
+}
+
+/* Originally for cursor effect, */
+/* But cursor not working for iframe, so comment off */
+/* body {
+   cursor: none;
+} */
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  /* pointer-events: none; */
+}
+
+/* .myCursor {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  pointer-events: none; 
+  transform: translate(-50%, -50%); 
+  z-index: 10000; 
+  transition: background-color 0.3s ease;
+}
+
+.trailingDot {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(197, 197, 197, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%); 
+  z-index: 9999;
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+  visibility: hidden;
+} */
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  text-align: center;
+  /* Avoide select */
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} 
+
+.page0 { background-color: #f4f4f4; color: #131313;}
+
+.titlePg { background-color: #131313; color: #fefefe;}
+
+.theTitle {
+  font-size: 2em;
+  line-height: 1em;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: normal;
+}
+
+.page1 { 
+  background-color: #f8f9fa; 
+  position: relative; 
+}
+
+.page2 { background-color: #e9ecef; }
+.page3 { background-color: #dee2e6; }
+.page4 { background-color: #f8f9fa; }
+.pageLast { background-color: #131313; color: #fefefe;}
+
+.textBox {
+  width: 40vw;
+  margin: 0 auto;
+  padding: 10px;
+  /* background-color: white; */
+}
+         
+.text{
+  font-size: 0.5em;
+  line-height: 1em;
+}
+
+p {
+  margin: 0;
+}
+
+.scrollBox {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  /* Function for the idea below not working: */
+  /* Hiding scrollBox when cursor not moving+pg not scrolling */
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 9000;
+}
+
+.scrollBtn {
+  background-color: #c6c6c64f;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; 
+  height: 40px; 
+  border: none;
+  border-radius: 5px;
+  /* Comment off because cursor not working for iframe */
+  /* cursor: none; */
+  cursor: pointer;
+}
+
+.scrollBtn:hover {
+  background-color: #cfcfcf;
+}
+
+.triUp {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid white;
+}
+
+.triDown {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid white;
+}
+
+.cornerBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #d5d5d54f;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1.5em;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; 
+  height: 40px; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.cornerBtn:hover {
+  background-color: #cfcfcf;
+}
+
+.tooltip {
+  width: 14em;
+  position: fixed;
+  top: 70px; 
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: normal;
+  display: none; 
+  z-index: 1000;
+}
